@@ -5,6 +5,51 @@
   height:250px;
 }
 
+
+.button-container {
+  display: flex;
+  gap: 20px; /* 按钮之间的间距 */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center;      /* 垂直居中 */
+  height: 60px;            /* 自定义高度 */
+  margin: 10px auto;        /* 在页面居中 */
+}
+
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  background-color: #333;
+  color: white;
+  padding: 5px 10px;   /* 减少内边距 */
+  border-radius: 20px; /* 调整圆角大小 */
+  text-decoration: none;
+  font-size: 18px;     /* 小文字 */
+  max-height: 100px;
+  max-width: 130px;    /* 限制最大宽度 */
+  white-space: nowrap; /* 避免文本换行 */
+  overflow: hidden;    /* 如果文本过长，隐藏溢出的内容 */
+  text-overflow: ellipsis; /* 显示省略号 */
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s ease;
+  margin: 0 30px;
+}
+
+.icon-button img {
+  position: relative;
+  width: 18%;  
+  height: auto;
+  z-index: 1; 
+  background-color: white;
+  margin-right: 20px;
+}
+
+
 .info {
   height:100%;
 }
