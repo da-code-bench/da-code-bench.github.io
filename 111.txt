@@ -1,0 +1,131 @@
+<div class="container-t is-max-desktop">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="infoCard">
+              <div class="infoBody">
+                <div class="infoHeadline">
+                  <h2>Leaderboard</h2>
+                </div>
+
+                <script type="text/javascript">
+                  document.querySelectorAll(".example_lst li").forEach(e => {
+                    e.addEventListener("click", Click_1)
+                  })
+
+                  function Click_1(eve) {
+                    const iTxt = eve.srcElement.innerText
+                    for (let v of document.querySelectorAll(".example_lst a")) {
+                      if (iTxt === v.innerText) {
+                        v.parentElement.className = "is-active";
+                      } else {
+                        v.parentElement.className = "";
+                      }
+                    }
+                    for (let block of document.getElementsByClassName('lib_examples')) {
+                      block.style.display = (block.title === iTxt) ? 'block' : 'none';
+                    }
+                  }
+
+                </script>
+
+                <div title="DA-Code" class="lib_examples" id="BoardPanel1" style="display: block;">
+                  <br>
+                  <table class="table performanceTable">
+                    <tr>
+                      <th>Rank</th>
+                      <th>Method</th>
+                      <!--                              <th>Details</th>-->
+                      <th>Score</th>
+                    </tr>
+
+                    <!-- <tr>
+                   <td>
+                      <p>1</p>
+                      <span class="date label label-default">July 11, 2024</span>
+                   </td>
+                          <td style="word-break:break-word;">
+                            <a class="link" href="https://www.staff.city.ac.uk/~sbrp622/papers/foundations_bm25_review.pdf">BM25</a>, with <a class="link" href="https://openai.com/index/gpt-4/">gpt-4-0125-preview</a> reasoning
+                            <p style="font-size: 15;"> <i> Microsoft </i> </p>
+                          </td>
+                   <td><b>26.5</b></td>
+                </tr> -->
+
+                    <tr>
+                      <td>
+                        <p>1</p>
+                        <span class="date label label-default">Oct 3, 2024</span>
+                      </td>
+                      <td style="word-break:break-word;">
+                        DA-Agent + GPT-4
+                      </td>
+                      <td><b>30.5</b></td>
+                    </tr>
+                    <tr>
+                      <td>
+                     <p>2</p>
+                        <span class="date label label-default">Oct 3, 2024</span>
+                      </td>
+                      <td style="word-break:break-word;">
+                        DA-Agent + GPT-4o
+                      </td>
+                      <td>29.1</td>
+                    </tr>
+                    <tr>
+                      <td>
+                      <p>3</p>
+                      <span class="date label label-default">Oct 3, 2024</span>
+                      </td>
+                      <td style="word-break:break-word;">
+                        DA-Agent + Claude-3-Opus
+                      </td>
+                      <td>27.6</td>
+                    </tr>
+                    <tr>
+                      <td>
+                      <p>4</p>
+                      <span class="date label label-default">Oct 3, 2024</span>
+                      </td>
+                      <td style="word-break:break-word;">
+                        DA-Agent + Qwen2.5-72B
+                      </td>
+                      <td>22.6</td>
+                    </tr>
+                    <tr>
+                      <td>
+                      <p>5</p>
+                      <span class="date label label-default">Oct 3, 2024</span>
+                      </td>
+                      <td style="word-break:break-word;">
+                        DA-Agent + Deepseek-Coder-V2.5
+                      </td>
+                      <td>20.7</td>
+                    </tr>
+                    <tr>
+                      <td>
+                      <p>6</p>
+                      <span class="date label label-default">Oct 3, 2024</span>
+                      </td>
+                      <td style="word-break:break-word;">
+                        DA-Agent + Mixtral-8x22B
+                      </td>
+                      <td>15.4</td>
+                    </tr>
+                    <tr>
+                      <td>
+                      <p>7</p>
+                      <span class="date label label-default">Oct 3, 2024</span>
+                      </td>
+                      <td style="word-break:break-word;">
+                        DA-Agent + Deepseek-Coder-33B
+                      </td>
+                      <td>10.8</td>
+                    </tr>
+                  </table>
+                </div>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>

@@ -123,18 +123,22 @@
               <span class="author-block"><sup>4</sup>Microsoft Research Asia</span>
           </div>
         </div>
-        
+
         <div class="button-container">
           <a href="paper-link.pdf" class="icon-button" target="_blank">
-              <img src="static/images/paperlink.png" alt="Paper Icon"> Paper
+              <img src="images/paperlink.png" alt="Paper Icon"> Paper
           </a>
-  
+      
           <a href="https://github.com/project-repo" class="icon-button" target="_blank">
-              <img src="static/images/github-logo.png" alt="GitHub Icon"> Project
+              <img src="images/github-logo.png" alt="GitHub Icon"> Github Project
           </a>
-  
+      
+          <a href="https://huggingface.co/datasets/Jianwen2003/DA-Code" class="icon-button" target="_blank">
+              <img src="images/huggingface_logo.png" alt="Huggingface Icon"> Huggingface Project
+          </a>
+      
           <a href="https://drive.google.com/drive/folders/1B_pMz01Ls-zxav-kca6li-cHmxZwVH2w?usp=sharing" class="icon-button" target="_blank">
-              <img src="static/images/dataset.png" alt="Dataset Icon"> Dataset
+              <img src="images/dataset.png" alt="Dataset Icon"> Dataset
           </a>
       </div>
 
@@ -177,9 +181,7 @@
             <style>
               .scroll-container {
                 max-height: 400px;
-                /* 设置容器的最大高度 */
                 overflow-y: auto;
-                /* 添加垂直滚动条 */
               }
             </style>
 
@@ -274,137 +276,179 @@
           </div>
         </div>
       </div>
-      <div class="container-t is-max-desktop">
+
+      
+      <div class="datastatistic">
         <div class="row">
           <div class="col-md-6">
             <div class="infoCard">
               <div class="infoBody">
                 <div class="infoHeadline">
-                  <h2>Leaderboard</h2>
+                  <h2>Data Statistics</h2>
                 </div>
+                <p align="left">
+                  <div class="left" style="font-family: 'Arial', sans-serif; font-size: 16px; color: #333333; line-height: 1.8; margin-bottom: 15px;">
+                      We present an overview of <b style="font-weight: bold;">DA-Code</b>’s data statistics, showcasing its structure and variety of tasks. DA-Code contains 500 tasks in total, categorized into Data Wrangling (DW), Machine Learning (ML), and Exploratory Data Analysis (EDA).
+                      <br><br>
+                      The ML tasks are comprised of sub-tasks such as Classification, Regression, and Clustering. EDA includes Visualization, Statistical Analysis, Data Insights, and Data Manipulation, while DW encompasses tasks such as Data Loading, Cleaning, and Transformation.
+                  </div>
+              </p>
+              <div style="text-align: center;">
+                <img src="images/table.png" alt="table image" width="60%" style="margin-top: 30px;">
+                <p style="font-family: 'Arial', sans-serif; font-size: 14px; color: #333333; font-weight: 600; margin-top: 10px; margin-bottom: 30px;">
+                    Data Statistics of Examples in DA-Code
+                </p> 
+            
+                <img src="images/statistic.png" alt="test image" width="85%" style="margin-left: 50px; margin-top: 20px;">
+                <p style="font-family: 'Arial', sans-serif; font-size: 14px; color: #333333; font-weight: 600; margin-top: 10px; margin-bottom: 30px;">
+                    DA-Code Task Types Proportion
+                </p> 
 
-                <script type="text/javascript">
-                  document.querySelectorAll(".example_lst li").forEach(e => {
-                    e.addEventListener("click", Click_1)
-                  })
-
-                  function Click_1(eve) {
-                    const iTxt = eve.srcElement.innerText
-                    for (let v of document.querySelectorAll(".example_lst a")) {
-                      if (iTxt === v.innerText) {
-                        v.parentElement.className = "is-active";
-                      } else {
-                        v.parentElement.className = "";
-                      }
-                    }
-                    for (let block of document.getElementsByClassName('lib_examples')) {
-                      block.style.display = (block.title === iTxt) ? 'block' : 'none';
-                    }
-                  }
-
-                </script>
-
-                <div title="DA-Code" class="lib_examples" id="BoardPanel1" style="display: block;">
-                  <br>
-                  <table class="table performanceTable">
-                    <tr>
-                      <th>Rank</th>
-                      <th>Method</th>
-                      <!--                              <th>Details</th>-->
-                      <th>Score</th>
-                    </tr>
-
-                    <!-- <tr>
-                   <td>
-                      <p>1</p>
-                      <span class="date label label-default">July 11, 2024</span>
-                   </td>
-                          <td style="word-break:break-word;">
-                            <a class="link" href="https://www.staff.city.ac.uk/~sbrp622/papers/foundations_bm25_review.pdf">BM25</a>, with <a class="link" href="https://openai.com/index/gpt-4/">gpt-4-0125-preview</a> reasoning
-                            <p style="font-size: 15;"> <i> Microsoft </i> </p>
-                          </td>
-                   <td><b>26.5</b></td>
-                </tr> -->
-
-                    <tr>
-                      <td>
-                        <p>1</p>
-                        <span class="date label label-default">Oct 3, 2024</span>
-                      </td>
-                      <td style="word-break:break-word;">
-                        DA-Agent + GPT-4
-                      </td>
-                      <td><b>30.5</b></td>
-                    </tr>
-                    <tr>
-                      <td>
-                     <p>2</p>
-                        <span class="date label label-default">Oct 3, 2024</span>
-                      </td>
-                      <td style="word-break:break-word;">
-                        DA-Agent + GPT-4o
-                      </td>
-                      <td>29.1</td>
-                    </tr>
-                    <tr>
-                      <td>
-                      <p>3</p>
-                      <span class="date label label-default">Oct 3, 2024</span>
-                      </td>
-                      <td style="word-break:break-word;">
-                        DA-Agent + Claude-3-Opus
-                      </td>
-                      <td>27.6</td>
-                    </tr>
-                    <tr>
-                      <td>
-                      <p>4</p>
-                      <span class="date label label-default">Oct 3, 2024</span>
-                      </td>
-                      <td style="word-break:break-word;">
-                        DA-Agent + Qwen2.5-72B
-                      </td>
-                      <td>22.6</td>
-                    </tr>
-                    <tr>
-                      <td>
-                      <p>5</p>
-                      <span class="date label label-default">Oct 3, 2024</span>
-                      </td>
-                      <td style="word-break:break-word;">
-                        DA-Agent + Deepseek-Coder-V2.5
-                      </td>
-                      <td>20.7</td>
-                    </tr>
-                    <tr>
-                      <td>
-                      <p>6</p>
-                      <span class="date label label-default">Oct 3, 2024</span>
-                      </td>
-                      <td style="word-break:break-word;">
-                        DA-Agent + Mixtral-8x22B
-                      </td>
-                      <td>15.4</td>
-                    </tr>
-                    <tr>
-                      <td>
-                      <p>7</p>
-                      <span class="date label label-default">Oct 3, 2024</span>
-                      </td>
-                      <td style="word-break:break-word;">
-                        DA-Agent + Deepseek-Coder-33B
-                      </td>
-                      <td>10.8</td>
-                    </tr>
-                  </table>
-                </div>
-                  </table>
-                </div>
+                <img src="images/file.png" alt="test image" width="85%" style="margin-left: 70px; margin-top: 20px;">
+                <p style="font-family: 'Arial', sans-serif; font-size: 14px; color: #333333; font-weight: 600; margin-top: 10px; margin-bottom: 20px;">
+                    DA-Code File Types Proportion
+                </p> 
+            </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      
+      <div class="leaderboard" style="margin-top: 50px; font-family: 'Cambria Math', 'Arial', sans-serif;">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="infoCard">
+              <div class="infoBody">
+                <div class="infoHeadline">
+                  <h2 style="font-family: 'Cambria Math', 'Arial', sans-serif;">Leaderboard of DA-Agent Baseline Experiments</h2>
+                </div>
+                <table style="width: 100%; font-family: 'Cambria Math', sans-serif; font-size: 16px; color: #333333; line-height: 1.6; border-collapse: collapse;">
+                  <thead>
+                    <tr style="background-color: #f2f2f2; text-align: left;">
+                      <th style="padding: 10px; width: 3%;">Rank</th>
+                      <th style="padding: 10px; width: 18%;">Model</th>
+                      <th style="padding: 10px; width: 6%;">DW</th>
+                      <th style="padding: 10px;">ML</th>
+                      <th style="padding: 10px;">EDA</th>
+                      <th style="padding: 10px;">Easy</th>
+                      <th style="padding: 10px;">Medium</th>
+                      <th style="padding: 10px;">Hard</th>
+                      <th style="padding: 10px;">Total</th>
+                      <th style="padding: 10px; width: 12%;">Completion Rate (\%)</th>
+                      <th style="padding: 10px;">Avg Steps</th>
+                      <th style="padding: 10px;">Executable Code (\%)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td style="padding: 10px;">1</td>
+                      <td style="padding: 10px;">GPT-4</td>
+                      <td style="padding: 10px;">30.4</td>
+                      <td style="padding: 10px;">48.4</td>
+                      <td style="padding: 10px;">24.6</td>
+                      <td style="padding: 10px;">45.4</td>
+                      <td style="padding: 10px;">27.8</td>
+                      <td style="padding: 10px;">23.4</td>
+                      <td style="padding: 10px;">30.5</td>
+                      <td style="padding: 10px;">99.4</td>
+                      <td style="padding: 10px;">7.3</td>
+                      <td style="padding: 10px;">76.8</td>
+                    </tr>
+                    <tr style="background-color: #f9f9f9;">
+                      <td style="padding: 10px;">2</td>
+                      <td style="padding: 10px;">GPT-4o</td>
+                      <td style="padding: 10px;">33.3</td>
+                      <td style="padding: 10px;">48.0</td>
+                      <td style="padding: 10px;">21.3</td>
+                      <td style="padding: 10px;">46.2</td>
+                      <td style="padding: 10px;">25.6</td>
+                      <td style="padding: 10px;">21.7</td>
+                      <td style="padding: 10px;">29.1</td>
+                      <td style="padding: 10px;">97.4</td>
+                      <td style="padding: 10px;">6.8</td>
+                      <td style="padding: 10px;">77.7</td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 10px;">3</td>
+                      <td style="padding: 10px;">Claude-3-Opus</td>
+                      <td style="padding: 10px;">29.3</td>
+                      <td style="padding: 10px;">46.8</td>
+                      <td style="padding: 10px;">20.7</td>
+                      <td style="padding: 10px;">44.7</td>
+                      <td style="padding: 10px;">23.8</td>
+                      <td style="padding: 10px;">19.0</td>
+                      <td style="padding: 10px;">27.6</td>
+                      <td style="padding: 10px;">97.7</td>
+                      <td style="padding: 10px;">8.9</td>
+                      <td style="padding: 10px;">75.7</td>
+                    </tr>
+                    <tr style="background-color: #f9f9f9;">
+                      <td style="padding: 10px;">4</td>
+                      <td style="padding: 10px;">Qwen2.5-72B</td>
+                      <td style="padding: 10px;">24.9</td>
+                      <td style="padding: 10px;">41.8</td>
+                      <td style="padding: 10px;">15.4</td>
+                      <td style="padding: 10px;">31.9</td>
+                      <td style="padding: 10px;">19.4</td>
+                      <td style="padding: 10px;">22.3</td>
+                      <td style="padding: 10px;">22.6</td>
+                      <td style="padding: 10px;">93.8</td>
+                      <td style="padding: 10px;">8.6</td>
+                      <td style="padding: 10px;">72.2</td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 10px;">5</td>
+                      <td style="padding: 10px;">Deepseek-Coder-V2.5</td>
+                      <td style="padding: 10px;">25.1</td>
+                      <td style="padding: 10px;">34.1</td>
+                      <td style="padding: 10px;">14.7</td>
+                      <td style="padding: 10px;">32.8</td>
+                      <td style="padding: 10px;">18.7</td>
+                      <td style="padding: 10px;">14.1</td>
+                      <td style="padding: 10px;">20.7</td>
+                      <td style="padding: 10px;">89.8</td>
+                      <td style="padding: 10px;">7.1</td>
+                      <td style="padding: 10px;">59.0</td>
+                    </tr>
+                    <tr style="background-color: #f9f9f9;">
+                      <td style="padding: 10px;">6</td>
+                      <td style="padding: 10px;">Mixtral-8x22B</td>
+                      <td style="padding: 10px;">14.8</td>
+                      <td style="padding: 10px;">31.6</td>
+                      <td style="padding: 10px;">10.2</td>
+                      <td style="padding: 10px;">17.6</td>
+                      <td style="padding: 10px;">16.8</td>
+                      <td style="padding: 10px;">8.6</td>
+                      <td style="padding: 10px;">15.4</td>
+                      <td style="padding: 10px;">67.2</td>
+                      <td style="padding: 10px;">11.1</td>
+                      <td style="padding: 10px;">55.1</td>
+                    </tr>
+                    <tr>
+                      <td style="padding: 10px;">7</td>
+                      <td style="padding: 10px;">Deepseek-Coder-33B</td>
+                      <td style="padding: 10px;">9.1</td>
+                      <td style="padding: 10px;">22.1</td>
+                      <td style="padding: 10px;">7.6</td>
+                      <td style="padding: 10px;">12.4</td>
+                      <td style="padding: 10px;">11.3</td>
+                      <td style="padding: 10px;">7.9</td>
+                      <td style="padding: 10px;">10.8</td>
+                      <td style="padding: 10px;">31.9</td>
+                      <td style="padding: 10px;">11.6</td>
+                      <td style="padding: 10px;">49.7</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+
     </div>
   </div>
 </div>
