@@ -31,7 +31,7 @@
   overflow: hidden;            
   text-overflow: ellipsis;      
   cursor: pointer;              
-  font-family: Arial, sans-serif;/* 字体样式 */
+  font-family: Arial, sans-serif;
   transition: background-color 0.3s ease; 
   margin: 0 8px;               
 }
